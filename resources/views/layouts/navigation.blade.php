@@ -20,10 +20,10 @@
                     <i class="fas fa-info-circle mr-2"></i>Tentang
                 </a>
                 <a href="{{ route('berita') }}" class="px-3 py-2 rounded-md text-lg text-white hover:text-amber-400 transition-colors duration-300 font-medium {{ request()->is('berita') ? 'text-amber-400' : '' }}">
-                    <i class="fas fa-newspaper mr-2"></i>Berita Dalam Negeri
+                    <i class="fas fa-newspaper mr-2"></i>Berita 
                 </a>
-                <a href="{{ route('berita') }}" class="px-3 py-2 rounded-md text-lg text-white hover:text-amber-400 transition-colors duration-300 font-medium {{ request()->is('/') ? 'text-amber-400' : '' }}">
-                    <i class="fas fa-globe mr-2"></i>Berita Internasional
+                <a href="{{ route('chat.index') }}" class="px-3 py-2 rounded-md text-lg text-white hover:text-amber-400 transition-colors duration-300 font-medium {{ request()->is('/') ? 'text-amber-400' : '' }}">
+                    <i class="fas fa-globe mr-2"></i>Chat
                 </a>
             </div>
 

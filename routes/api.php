@@ -5,6 +5,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\Auth\ApiAuthController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\ChatController;
+
+Route::middleware('auth:sanctum')->group(function () {
+    Route::get('/chat', [ChatController::class, 'apipesan']);
+    Route::post('/chat', [ChatController::class, 'store']);
+});
 
 Route::get('/comments', [CommentController::class, 'index']);
 

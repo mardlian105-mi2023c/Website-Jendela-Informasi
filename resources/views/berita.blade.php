@@ -10,7 +10,7 @@
         <!-- Header Section -->
         <div class="text-center mb-12 sm:mb-16 lg:mb-20">
             <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-800 mb-4">
-                <span class="text-amber-400">Berita</span> Terkini
+                <span class="text-amber-400">Jendela</span> Informasi
             </h1>
             <p class="text-lg text-slate-600 max-w-2xl mx-auto">
                 Temukan informasi terbaru dan terpercaya dari berbagai kategori

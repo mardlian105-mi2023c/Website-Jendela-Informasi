@@ -5,11 +5,19 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\ChatController;
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/chat', [ChatController::class, 'index'])->name('chat.index');
+    Route::post('/chat', [ChatController::class, 'store'])->name('chat.store');
+});
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'banner'])->name('banner');
 Route::resource('news', NewsController::class);
 Route::get('/berita', [NewsController::class, 'berita'])->name('berita');
 Route::get('/berita/kategori/{id}', [NewsController::class, 'kategori'])->name('berita.kategori');
+
 Route::prefix('admin')->middleware(['auth'])->name('admin.')->group(function () {
     Route::resource('news', NewsController::class);
 });
