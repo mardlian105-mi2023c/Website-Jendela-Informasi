@@ -1,7 +1,6 @@
 <nav class="bg-gradient-to-br from-slate-900 to-slate-800 shadow-xl">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-20 items-center">
-            <!-- Logo -->
             <div class="flex-shrink-0 flex items-center">
                 <a href="/" class="flex items-center">
                     <svg class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -11,7 +10,6 @@
                 </a>
             </div>
 
-            <!-- Menu Tengah -->
             <div class="hidden md:flex md:space-x-8">
                 <a href="/" class="px-3 py-2 rounded-md text-lg text-white hover:text-amber-400 transition-colors duration-300 font-medium {{ request()->is('/') ? 'text-amber-400' : '' }}">
                     <i class="fas fa-home mr-2"></i>Beranda
@@ -27,7 +25,6 @@
                 </a>
             </div>
 
-            <!-- User Section -->
             <div class="flex items-center">
                 @auth
                     <!-- User Dropdown -->
@@ -73,7 +70,7 @@
                                     Dashboard Admin
                                 </a>
                                 @endif
-                                <a href="/" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                                <a href="{{ route('profile.edit') }}" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                                     <i class="fas fa-cog mr-3 text-blue-500 w-5 text-center"></i>
                                     Pengaturan
                                 </a>
