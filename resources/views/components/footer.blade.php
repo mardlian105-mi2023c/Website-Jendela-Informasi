@@ -10,19 +10,19 @@
 
     <ul class="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
       <li>
-        <a class="text-white transition hover:text-gray-700/75" href="#"> About </a>
+        <a class="text-white transition hover:text-gray-700/75" href="/"> Beranda </a>
+      </li>
+      
+      <li>
+        <a class="text-white transition hover:text-gray-700/75" href="{{ route('about') }}"> About </a>
       </li>
 
       <li>
-        <a class="text-white transition hover:text-gray-700/75" href="#"> News </a>
+        <a class="text-white transition hover:text-gray-700/75" href="{{ route('berita') }}"> News </a>
       </li>
 
       <li>
-        <a class="text-white transition hover:text-gray-700/75" href="#"> Berita Internasional </a>
-      </li>
-
-      <li>
-        <a class="text-white transition hover:text-gray-700/75" href="#"> Berita Dalam Negeri </a>
+        <a class="text-white transition hover:text-gray-700/75" href="{{ route('chat.index') }}"> Chat </a>
       </li>
     </ul>
   </div>

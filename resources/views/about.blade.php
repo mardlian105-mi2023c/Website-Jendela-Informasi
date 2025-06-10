@@ -51,23 +51,23 @@
             <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Tim Kami</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden transition-transform duration-300 hover:-translate-y-2">
-                    <img src="https://assets1.lottiefiles.com/packages/lf20_5tkzkblw.json" alt="Editor in Chief" class="w-full h-64 object-cover">
+                    <img src="https://i.pinimg.com/736x/60/69/b7/6069b78da06830800beacd39e503e269.jpg" alt="Editor in Chief" class="w-full h-72 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-900">M. Mardlian Nurofiq</h3>
-                        <p class="text-blue-600 mb-3">Admin 1</p>
+                        <p class="text-blue-600 mb-3">Admin</p>
                         <p class="text-gray-600">Memimpin redaksi dengan pengalaman 15 tahun di dunia jurnalistik.</p>
                     </div>
                 </div>
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden transition-transform duration-300 hover:-translate-y-2">
-                    <img src="https://assets1.lottiefiles.com/packages/lf20_5tkzkblw.json" alt="Senior Reporter" class="w-full h-64 object-cover">
+                    <img src="https://i.pinimg.com/736x/f5/8e/a9/f58ea97fe51761b90aa6897a8b02d031.jpg" alt="Senior Reporter" class="w-full h-72 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-900">Ika</h3>
+                        <h3 class="text-xl font-semibold text-gray-900">Ika Cahya</h3>
                         <p class="text-blue-600 mb-3">Senior Reporter</p>
                         <p class="text-gray-600">Spesialis di bidang politik dan hubungan internasional.</p>
                     </div>
                 </div>
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden transition-transform duration-300 hover:-translate-y-2">
-                    <img src="https://assets1.lottiefiles.com/packages/lf20_5tkzkblw.json" alt="Tech Editor" class="w-full h-64 object-cover">
+                    <img src="https://i.pinimg.com/736x/e6/af/29/e6af29443b3536ce95cdf842fc1e4f81.jpg" alt="Tech Editor" class="w-full h-72 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-900">Dicky Dippos Sihite</h3>
                         <p class="text-blue-600 mb-3">Tech Editor</p>
@@ -111,8 +111,7 @@
             </div>
         </div>
 
-        <!-- Contact CTA -->
-        <div class="bg-blue-700 rounded-3xl shadow-xl overflow-hidden">
+        <div class="bg-gradient-to-br from-slate-900 to-slate-800 shadow-xl rounded-3xl overflow-hidden">
             <div class="grid md:grid-cols-2">
                 <div class="p-10 md:p-12 lg:p-16">
                     <h2 class="text-3xl font-bold text-white mb-6">Hubungi Kami</h2>
@@ -135,7 +134,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                             </svg>
-                            <p class="ml-3 text-blue-100">Jl. Kebon Jeruk Raya No. 27, Jakarta Barat</p>
+                            <p class="ml-3 text-blue-100">Jl. Nganjuk - Medan Raya No. 27, Nganjuk</p>
                         </div>
                     </div>
                 </div>

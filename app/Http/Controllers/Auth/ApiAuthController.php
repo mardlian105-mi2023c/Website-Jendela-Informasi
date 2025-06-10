@@ -19,10 +19,17 @@ class ApiAuthController extends Controller
 
         $user = User::where('email', $request->email)->first();
 
-        if (! $user || ! Hash::check($request->password, $user->password)) {
+        if (! $user) {
             return response()->json([
                 'status' => false,
-                'message' => 'Invalid credentials'
+                'message' => 'Email tidak ditemukan'
+            ], 404);
+        }
+
+        if (! Hash::check($request->password, $user->password)) {
+            return response()->json([
+                'status' => false,
+                'message' => 'Password salah'
             ], 401);
         }
 
@@ -30,7 +37,7 @@ class ApiAuthController extends Controller
 
         return response()->json([
             'status' => true,
-            'message' => 'Login success',
+            'message' => 'Login berhasil',
             'token' => $token,
             'user' => $user
         ]);
@@ -40,9 +47,16 @@ class ApiAuthController extends Controller
     {
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'email' => ['required', 'string', 'email', 'max:255'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
+
+        if (User::where('email', $request->email)->exists()) {
+            return response()->json([
+                'status' => false,
+                'message' => 'Email sudah digunakan'
+            ], 409);
+        }
 
         $user = User::create([
             'name' => $request->name,
@@ -54,7 +68,7 @@ class ApiAuthController extends Controller
 
         return response()->json([
             'status' => true,
-            'message' => 'User registered successfully',
+            'message' => 'Registrasi berhasil',
             'token' => $token,
             'user' => $user
         ], 201);

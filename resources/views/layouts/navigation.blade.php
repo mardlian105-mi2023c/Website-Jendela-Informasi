@@ -15,7 +15,7 @@
                     <i class="fas fa-home mr-2"></i>Beranda
                 </a>
                 <a href="{{ route('about') }}" class="px-3 py-2 rounded-md text-lg text-white hover:text-amber-400 transition-colors duration-300 font-medium {{ request()->is('about') ? 'text-amber-400' : '' }}">
-                    <i class="fas fa-info-circle mr-2"></i>Tentang
+                    <i class="fas fa-info-circle mr-2"></i>About
                 </a>
                 <a href="{{ route('berita') }}" class="px-3 py-2 rounded-md text-lg text-white hover:text-amber-400 transition-colors duration-300 font-medium {{ request()->is('berita') ? 'text-amber-400' : '' }}">
                     <i class="fas fa-newspaper mr-2"></i>Berita 

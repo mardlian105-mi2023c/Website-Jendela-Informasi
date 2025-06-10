@@ -95,12 +95,47 @@
             @endforelse
         </div>
 
-        <!-- Pagination -->
-        @if($news->hasPages())
-        <div class="mt-12 flex justify-center">
-            {{ $news->onEachSide(1)->links('vendor.pagination.tailwind') }}
-        </div>
-        @endif
+              <!-- Pagination -->
+      @if ($news->hasPages())
+      <div class="mt-12 flex items-center justify-center">
+          <nav class="flex items-center space-x-2">
+              {{-- Previous Page Link --}}
+              @if ($news->onFirstPage())
+                  <span class="px-3 py-1 rounded-md text-gray-400 cursor-not-allowed">
+                      &laquo;
+                  </span>
+              @else
+                  <a href="{{ $news->previousPageUrl() }}" class="px-3 py-1 rounded-md bg-white text-blue-600 hover:bg-blue-50 transition-colors">
+                      &laquo;
+                  </a>
+              @endif
+
+              {{-- Pagination Elements --}}
+              @foreach ($news->getUrlRange(1, $news->lastPage()) as $page => $url)
+                  @if ($page == $news->currentPage())
+                      <span class="px-3 py-1 rounded-md bg-blue-600 text-white font-medium">
+                          {{ $page }}
+                      </span>
+                  @else
+                      <a href="{{ $url }}" class="px-3 py-1 rounded-md bg-white text-blue-600 hover:bg-blue-50 transition-colors">
+                          {{ $page }}
+                      </a>
+                  @endif
+              @endforeach
+
+              {{-- Next Page Link --}}
+              @if ($news->hasMorePages())
+                  <a href="{{ $news->nextPageUrl() }}" class="px-3 py-1 rounded-md bg-white text-blue-600 hover:bg-blue-50 transition-colors">
+                      &raquo;
+                  </a>
+              @else
+                  <span class="px-3 py-1 rounded-md text-gray-400 cursor-not-allowed">
+                      &raquo;
+                  </span>
+              @endif
+          </nav>
+      </div>
+      @endif
     </div>
 </div>
 @endsection
